@@ -1,0 +1,9 @@
+# Julia set-up
+Manifest.toml
+
+# Output files
+*.jld2
+
+# Plots and animations
+*.png
+*.mp4
