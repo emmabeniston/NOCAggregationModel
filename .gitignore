@@ -7,3 +7,6 @@ Manifest.toml
 # Plots and animations
 *.png
 *.mp4
+
+# Progress messages
+*progress_printing.txt

@@ -9,10 +9,10 @@ using .NOCAggregationModel
 
 # Parameters
 damping_rate = 1/86400 # For the relaxation forcing. Units 1/seconds. Change target functions in forcings section
-r₁ = 10*1e-6 # radius in meters?
+r₁ = 10*1e-6 # radius in meters
 r₂ = 100*1e-6
 r₃ = 200*1e-6
-w_sink_speed₁ = 0.1 / 86400 # speed in meters per second?
+w_sink_speed₁ = 0.1 / 86400 # speed in meters per second
 w_sink_speed₂ = 0.2 / 86400
 w_sink_speed₃ = 0.3 / 86400
 α = 0.5
@@ -25,7 +25,7 @@ Lx = 2
 Ly = 2
 Lz = 40
 
-grid = RectilinearGrid(CPU(), size = (Nx, Ny, Nz), x = (0, Lx), y = (0, Ly), z = (-Lz, 0))
+grid = RectilinearGrid(GPU(), size = (Nx, Ny, Nz), x = (0, Lx), y = (0, Ly), z = (-Lz, 0))
 
 # Set up biogeochemistry
 biogeochemistry = NOCAggregationModelThreeCompartment(; grid, r₁, r₂, r₃, w_sink_speed₁, w_sink_speed₂, w_sink_speed₃, α, D, ν₀)
